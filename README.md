@@ -13,4 +13,5 @@ In the upcoming commits, I plan to integrate:
 - **crons jobs** for job scheduling
 - **jwt** for **authentication** and **authorization**  
 - **integrated with external api**
+  
 Stay tuned for updates! 🚀  
