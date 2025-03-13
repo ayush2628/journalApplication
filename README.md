@@ -12,5 +12,6 @@ In the upcoming commits, I plan to integrate:
 - **crons jobs** for job scheduling
 - **jwt** for **authentication** and **authorization**  
 - **integrated with external api**
+- **OAuth 2.0* to support one login using Sign on with google
   
 Stay tuned for updates! 🚀  
