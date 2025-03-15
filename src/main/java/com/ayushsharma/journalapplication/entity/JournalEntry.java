@@ -1,6 +1,6 @@
 package com.ayushsharma.journalapplication.entity;
 
-
+import com.ayushsharma.journalapplication.enums.Sentiment;
 import lombok.Data;
 import lombok.NonNull;
 import org.bson.types.ObjectId;
@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-// Pojo class plain old java object
 @Data
 @Document(collection = "journal_entries")
 public class JournalEntry {
@@ -21,4 +20,5 @@ public class JournalEntry {
     private String title;
     private String content;
     private LocalDateTime date;
+    private Sentiment sentiment;
 }

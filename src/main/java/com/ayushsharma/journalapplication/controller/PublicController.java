@@ -27,9 +27,7 @@ public class PublicController {
         if(!users.isEmpty()){
             return new ResponseEntity<>(users, HttpStatus.OK);
         }
-
-
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-
     }
+
 }
