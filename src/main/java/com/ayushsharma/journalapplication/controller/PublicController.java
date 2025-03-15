@@ -4,6 +4,7 @@ import com.ayushsharma.journalapplication.entity.User;
 import com.ayushsharma.journalapplication.repository.UserRepositoryImpl;
 import com.ayushsharma.journalapplication.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +29,19 @@ public class PublicController {
             return new ResponseEntity<>(users, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    @GetMapping("check-for-redis")
+    public ResponseEntity<?> getRedisValue(){
+
+        Object name = redisTemplate.opsForValue().get("mothername");
+
+//        Object name2 = redisTemplate.opsForValue().get("email");
+//        String t = "ayush";
+        return new ResponseEntity<>(name,HttpStatus.OK);
+
     }
 
 }
