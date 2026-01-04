@@ -1,8 +1,5 @@
 ## Journal Application
 
-This is my first Spring boot project that I am pushing to my personal GitHub.  
-It's currently in the early stages of development.  
-
 ### Enhancement done 
 - **Redis** for caching
 - **crons jobs** for job scheduling
